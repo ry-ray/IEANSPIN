@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IEANSPIN</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main__page">
+      <div class="main__header">
+        <div class="main__logo">
+          <svg
+            width="147"
+            height="20"
+            viewBox="0 0 147 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <rect width="147" height="20" fill="url(#pattern0)" />
+            <defs>
+              <pattern
+                id="pattern0"
+                patternContentUnits="objectBoundingBox"
+                width="1"
+                height="1"
+              >
+                <use
+                  xlink:href="#image0_1_1778"
+                  transform="scale(0.00680272 0.05)"
+                />
+              </pattern>
+              <image
+                id="image0_1_1778"
+                width="147"
+                height="20"
+                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJMAAAAUCAYAAACJUA91AAAFkUlEQVRoBdVajZUWNwykhCshJaSD0EHoIOkgdAAdhA6gA+gAOoAOoAPoQHnz3cxm1ivL2rvjZeP39rw/kizJY0n2d88i4nNEvH/2wBYRH6LXvkfE87PDRMRdRHzldXeWH/QRgbHfQ9ZZfvK96/BR11f0qbxy829E/N6RQX3fDjIgCz6ADW05lIXxX1RjR8Qbyv+1osu+RcTLbW5kcUbYeRcRnygDfXUBdL90ZDoNlZWaL/1b9z4ivlAAHHvKYbJtNRbkErRg+Tb4QvoDEOX4WHAklgz4DX6VDfjctoOyXlf6m4+x6P6saMdvNv/PsWpvbSTqPktYl/4sHVH/IyJwfT3LL/qIeEdT4bBypYoHPXk++bvxnhEJctEOgOf317Thw8jvzwamAwCwGC0TYLxlpKVOB1k+Ju4BIuoHlr/H77Nnzf8t63CwmBGv3kvYiu4h37naoSLCsMBQruxqHDpMJr+qaPWNxCswIdSjlZNGMJQAqMBkOskXy/Tb0cvkIroiIqJ9bIJVmenakckBZE5eOlDOyXoCFFEObVlHkW4FJtWNp2vCUUezcwpMRjrY8H3kH5+p/1RWQo8aVQDppGXRXhdMdBhC+RcZzFWzdKDoZz1lqwYpHdYEEyIn2ql6I9OvAybw2YSXAKZebTBJJ2YDsGMOpnbt9OBgl0tzlpK2GsQMnBonZ3jPCHSoA0ze1GH0zyoyvSAdCuMyjble2f0JMAnAjwYT0nMWpTkHiuJvJ/r+LyITcjbaNjmsOfCuLGJHo+/F3P4e6oDBYRngwFiCCePZCm3vtEY9KUe7uTKaWCH+FGASILCodjUpywJF8cNiMbufLs1FxG/FtVMwc6K/q0BjW+T2MYOBCbeHtEaHpYUneTtg8loDbDgrKifabdb9icgEO9C2xSYZ3pNmBUyBieT7tMayQHXhDnA/C0xSZNafmXyF8MMWPkt/7rzsngrBYZJ7SGt0mJy6AU68mdzsHfUTMMGOaNgGVQdMRtMBOXToggnpeprWmA7pknvA/SwwIe/OrrM1Dibzx2SyEAHQ2mdOpL85vpHWdoBz3kyf2TucZZmjIWa5c4QsA0oKAEZRLAa0JUhJl8qS7tKT4+N4oEprO8CJ96YLB7tMAc5JgFpvZOzYW73QSp+0cVvFVVqjQ/0AD+wb76jL6pngmE7OyG9gAvi8dPiDqVNT1lqgJG6DifZjwaZpjd8dcNLn6Wqm0SkPfTYjUHPgd67sgqPRWmdOpN0BYkhruzrAHKZ0teM9axvHEqCmi4TjqgCn2ocOqXgZkaQjuU+ByXiRadT+0nvq6YADzbXARKdL+U7fOnOioBQQWR0gp1EfrNByMkRf9bap+LygE5hwyo17nK4jUuK+LLYzubS91F+pasI/prWdDvTf/e5aM5YJ6ryrFOnwO4394Ii6Bc6rLoXhZbivwITxmVqnhafr+Jh71SKVDNoMlUsAVDL822PBBFlcCIqsOB7IN1MXA1Nru0sDkbfRPrrzsnvSpZFJ9KvzFNE9ptd/FVQyrggm6Msord8EURYcUy0d/Z8X4JxMqNOqg2igapp8pXDWOmAyhyniHeooijt0rOvKzYAdaZQHrlcFk4y27AG37uooIO7WRHy2f6o0Zz/qHs6WZjqZYdtPLhktTSwjk/NVdZTT4Z4pQCkSm4VdTUEa7MTUVqBDake7TJpLbIaOshkbpXubqTg6HK5VVzrJAtOCV3KPofHfEIpI8G1UvHq2orY8c6KNbTARAF54rnZg/q8boy9hFxqc36nvLg8m+gf/W7XVUbd5she0edqlDrWt/JTRPqSrjfkYzi4jTAYsnmpv/1kwoYHRqf4Zvd5ZHVWmJtDTBuy6kCa1amE6tvLYYh8ilsbx3iJdunidtnPP+S1ldXyYjUWbUUfB3rt/AIgtF7IXKujiAAAAAElFTkSuQmCC"
+              />
+            </defs>
+          </svg>
+        </div>
+        <!-- <div class="mobile__menu">
+          <div class="know">
+            <p>KNOW-HOW</p>
+          </div>
+          <div class="info">
+            <p>O NAS</p>
+          </div>
+          <div class="blog">
+            <p>BLOG</p>
+          </div>
+          <div class="contact">
+            <p>KONTAKT</p>
+          </div>
+        </div> -->
+        <div class="main__menu">
+          <div class="know">
+            <p>KNOW-HOW</p>
+          </div>
+          <div class="info">
+            <p>O NAS</p>
+          </div>
+          <div class="blog">
+            <p>BLOG</p>
+          </div>
+          <div class="contact">
+            <p>KONTAKT</p>
+          </div>
+        </div>
+
+        <div class="main__animationtriangleblock1">
+          <div class="main__animationtriangleblock2">
+            <img class="main__trianglered" src="./images/svg/redtriangle.svg" />
+            <img
+              class="main__triangleblue"
+              src="./images/svg/bluetriangle.svg"
+            />
+          </div>
+        </div>
+
+        <div class="main__taglinearea">
+          <!-- <p id="spin">Spin!</p> -->
+          <p id="designing">[re]designing</p>
+          <p id="yourbussines">your business</p>
+        </div>
+
+        <div class="main__headerbottomcrap">
+          <div class="main__headerbottomrightcrapblockp">
+            <p>Pomagamy rozwijać progresywne firmy, zespoły</p>
+            <p>i kompetencje w coraz szybciej zmieniającym się świecie.</p>
+          </div>
+
+          <div class="main__headerbottomrightcrapblock">
+            <div class="main__headerbottomrightcraptext">
+              <p id="poznajmy">Poznajmy się!</p>
+              <p id="umow">Umów się na bezpłatną konsultację</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main__content">
+        <div class="main__content-know">
+          <p class="main__content-know-help">Jak możemy pomóc</p>
+
+          <div class="main__content-know-block1">
+            <p class="main__content-know-title">Transformacje</p>
+            <p class="main__content-know-text">
+              Agile・Lean・Brand・Digital innovation
+            </p>
+            <div class="main__content-know-vector-position">
+              <div class="main__content-know-vector-arrow">
+                <img src="./images/svg/arrow.svg" />
+              </div>
+              <div class="main__content-know-vector-circle">
+                <img src="./images/svg/circle.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="main__content-know-block2">
+            <p class="main__content-know-title">Wsparcie</p>
+            <p class="main__content-know-text">
+              Doradztwo ・Narzędzia ・Coaching menedżerski
+            </p>
+            <div class="main__content-know-vector-position">
+              <div class="main__content-know-vector-arrow">
+                <img src="./images/svg/arrow.svg" />
+              </div>
+              <div class="main__content-know-vector-circle">
+                <img src="./images/svg/circle.svg" />
+              </div>
+            </div>
+          </div>
+
+          <div class="main__content-know-block3">
+            <p class="main__content-know-title">Rozwój</p>
+            <p class="main__content-know-text">
+              Warsztaty・Symulacje ・Szkolenia hybrydowe
+            </p>
+            <div class="main__content-know-vector-position">
+              <div class="main__content-know-vector-arrow">
+                <img src="./images/svg/arrow.svg" />
+              </div>
+              <div class="main__content-know-vector-circle">
+                <img src="./images/svg/circle.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="main__content-know-block4">
+            <p class="main__content-know-title">Przedsiębiorczość</p>
+            <p class="main__content-know-text">
+              Mentoring・Relacje wspólnicze・Nowy biznes
+            </p>
+            <div class="main__content-know-vector-position">
+              <div class="main__content-know-vector-arrow">
+                <img src="./images/svg/arrow.svg" />
+              </div>
+              <div class="main__content-know-vector-circle">
+                <img src="./images/svg/circle.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main__content-info">
+          <div class="main__content-info-title-box">
+            <div class="main__content-info-title">
+              <p id="true">Prawdziwe</p>
+              <p id="history">historie</p>
+            </div>
+          </div>
+          <div class="main__content-info-photo-box1">
+            <div class="main__content-info-photo-box-content">
+              <img
+                class="main__content-info-photo-box-content-photo"
+                src="./images/photos/photo1.png"
+                alt="photo1"
+              />
+              <div class="main__content-info-photo-box-content-caption">
+                Historia transformacji zwinnej ADMIND - Krzysztof Langer, CEO i
+                współwłaściciel
+              </div>
+            </div>
+          </div>
+          <div class="main__content-info-text-box">
+            <div class="main__content-info-text">
+              <p id="zapraszamy">
+                Zapraszamy do lektury historii klientów, partnerów i przyjaciół,
+                z którymi mamy przyjemność wędrować drogą rozwoju i
+                przedsiębiorczości.
+              </p>
+              <p id="kazda">
+                Każda historia jest inna, bo stoją za nimi unikalne organizacje
+                tworzone przez ludzi obdarzonych wyjątkowymi pomysłami,
+                talentami i doświadczeniami.
+              </p>
+            </div>
+          </div>
+          <div class="main__content-info-photo-box2">
+            <div class="main__content-info-photo-box-content">
+              <img
+                class="main__content-info-photo-box-content-photo"
+                src="./images/photos/photo2.png"
+                alt="photo2"
+              />
+              <div class="main__content-info-photo-box-content-caption">
+                Historia transformacji cyfrowej Santander Consumer Multirent -
+                Piotr Jasicki, członek zarządu
+              </div>
+            </div>
+          </div>
+          <div class="main__content-info-photo-box3">
+            <div class="main__content-info-photo-box-content">
+              <img
+                class="main__content-info-photo-box-content-photo"
+                src="./images/photos/photo3.png"
+                alt="photo3"
+              />
+              <div class="main__content-info-photo-box-content-caption">
+                Historia transformacji biznesowej TONY - Mateusz Biegaj,
+                pomysłodawca i współwłaściciel
+              </div>
+            </div>
+          </div>
+          <div class="main__content-info-photo-box4">
+            <div class="main__content-info-photo-box-content">
+              <img
+                class="main__content-info-photo-box-content-photo"
+                src="./images/photos/photo4.png"
+                alt="photo4"
+              />
+              <div class="main__content-info-photo-box-content-caption">
+                Historia transformacji cyfrowej ANSEE - Piotr Szmigiel, członek
+                zarządu
+              </div>
+            </div>
+          </div>
+          <div class="main__content-info-photo-box5">
+            <div class="main__content-info-photo-box-content">
+              <img
+                class="main__content-info-photo-box-content-photo"
+                src="./images/photos/photo5.png"
+                alt="photo5"
+              />
+              <div class="main__content-info-photo-box-content-caption">
+                Historia partnerstwa strategicznego z FICTURO - Paulina Jarosz,
+                współwłaścicielka marki
+              </div>
+            </div>
+          </div>
+          <div class="main__content-info-photo-box6">
+            <div class="main__content-info-photo-box-content">
+              <img
+                class="main__content-info-photo-box-content-photo"
+                src="./images/photos/photo6.png"
+                alt="photo6"
+              />
+              <div class="main__content-info-photo-box-content-caption">
+                Historia startupu GLOBAL LIGNUM - Dominik Szkwarek, pomysłodawca
+                i właściciel
+              </div>
+            </div>
+          </div>
+          <div class="main__content-info-photo-box7">
+            <div class="main__content-info-photo-box-content">
+              <img
+                class="main__content-info-photo-box-content-photo"
+                src="./images/photos/photo7.png"
+                alt="photo7"
+              />
+              <div class="main__content-info-photo-box-content-caption">
+                Historia transformacji biznesowej EXSO - Marcin Kuczyński,
+                współwłaściciel i prezes zarządu
+              </div>
+            </div>
+          </div>
+          <div class="main__content-info-photo-box8">
+            <div class="main__content-info-photo-box-content">
+              <img
+                class="main__content-info-photo-box-content-photo"
+                src="./images/photos/photo8.png"
+                alt="photo8"
+              />
+              <div class="main__content-info-photo-box-content-caption">
+                Historia nowego rozdziału rozwoju USEO - Dariusz Michalski, CEO
+                i właściciel
+              </div>
+            </div>
+          </div>
+          <div class="main__content-info-quote-box">
+            <p id="quote">
+              “Jesteśmy złączeni dzięki historiom” – Arystoteles, 384-322 p.n.e.
+            </p>
+          </div>
+        </div>
+        <div class="main__content-brands-box">
+          <p id="zaufali">Zaufali nam</p>
+          <div class="main__content-brands1">
+            <img id="admind" src="./images/brands/admind.svg" alt="admind" />
+            <img id="akat" src="./images/brands/akat.svg" alt="akat" />
+            <img id="corner" src="./images/brands/corner.svg" alt="corner" />
+            <img id="eacto" src="./images/brands/eacto.svg" alt="eacto" />
+            <img
+              id="santander"
+              src="./images/brands/santander.svg"
+              alt="santander"
+            />
+          </div>
+          <div class="main__content-brands2">
+            <img id="setup" src="./images/brands/setup.svg" alt="setup" />
+            <img id="exso" src="./images/brands/exso.svg" alt="exso" />
+            <img id="alfa" src="./images/brands/alfa.svg" alt="alfa" />
+            <img id="bm" src="./images/brands/bm.svg" alt="bm" />
+            <img id="brs" src="./images/brands/brs.svg" alt="brs" />
+          </div>
+        </div>
+        <div class="main__content-pr-box">
+          <div class="main__content-pr-box-left-list">
+            <p id="agile">agile</p>
+            <p id="evidence">evidence</p>
+            <p id="empowerment">empowerment</p>
+            <p id="innovation">innovation</p>
+          </div>
+          <div class="main__content-pr-box-all">
+            <div class="main__content-pr-box-all2">
+              <div class="main__content-pr-box-text-box">
+                <div class="main__content-pr-box-text-box-conteiner">
+                  <p class="main__content-pr-box-text-box-conteiner-title1">
+                    Czy zarządzasz w
+                  </p>
+                  <p class="main__content-pr-box-text-box-conteiner-title2">
+                    efektywny sposób?
+                  </p>
+                  <p class="main__content-pr-box-text-box-conteiner-body">
+                    Wbuduj zwinność w DNA Twojej organizacji i osiągaj 2 razy
+                    więcej w 2 razy krótszym czasie, będąc gotowym na zmiany,
+                    które nadejdą.
+                  </p>
+                  <div
+                    class="main__content-pr-box-text-box-conteiner-details-box"
+                  >
+                    <p class="main__content-pr-box-text-box-conteiner-details">
+                      Sprawdź szczegóły
+                    </p>
+                  </div>
+                  <div
+                    class="main__content-pr-box-text-box-conteiner-line"
+                  ></div>
+                </div>
+              </div>
+              <div class="main__content-pr-box-footer">
+                <p class="main__content-pr-box-footer-agile">agile</p>
+                <p class="main__content-pr-box-footer-evidence">evidence</p>
+                <p class="main__content-pr-box-footer-empowerment">
+                  empowerment
+                </p>
+                <p class="main__content-pr-box-footer-innovation">innovation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main__content-blog">
+          <div class="main__content-blog-covers-box1">
+            <img
+              class="main__content-blog-covers-box-img"
+              src="./images/covers/cover1.png"
+              alt="cover1"
+            />
+            <div class="main__content-blog-covers-box-text">
+              Braterstwo broni ...
+            </div>
+            <div class="main__content-blog-covers-box-tags">
+              <p class="main__content-blog-covers-box-tag">empowerment</p>
+              <p class="main__content-blog-covers-box-tag-com">,</p>
+              <p class="main__content-blog-covers-box-tag">przywództwo</p>
+              <p class="main__content-blog-covers-box-tag-com">,</p>
+              <p class="main__content-blog-covers-box-tag">zespół</p>
+            </div>
+          </div>
+          <div class="main__content-blog-title-box1">
+            <div class="main__content-blog-title">Inspiracje</div>
+            <div class="main__content-blog-body">
+              Rozwój to umiejętność patrzenia na świat przez pryzmat
+              różnorodności doświadczeń otaczających nas osób. Dzielimy się tym,
+              co nas „kręci” i dziękujemy za wszelkie inspiracje, które nadają
+              sens naszym działaniom.
+            </div>
+          </div>
+          <div class="main__content-blog-covers-box2">
+            <img
+              class="main__content-blog-covers-box-img"
+              src="./images/covers/cover2.png"
+              alt="cover1"
+            />
+            <div class="main__content-blog-covers-box-text">
+              Droga ku zwinności ...
+            </div>
+            <div class="main__content-blog-covers-box-tags">
+              <p class="main__content-blog-covers-box-tag">agile</p>
+              <p class="main__content-blog-covers-box-tag-com">,</p>
+              <p class="main__content-blog-covers-box-tag">evidence</p>
+              <p class="main__content-blog-covers-box-tag-com">,</p>
+              <p class="main__content-blog-covers-box-tag">lean</p>
+            </div>
+          </div>
+          <div class="main__content-blog-covers-box3">
+            <img
+              class="main__content-blog-covers-box-img"
+              src="./images/covers/cover3.png"
+              alt="cover1"
+            />
+            <div class="main__content-blog-covers-box-text">
+              Od dobrego do wielkiego ...
+            </div>
+            <div class="main__content-blog-covers-box-tags">
+              <p class="main__content-blog-covers-box-tag">ikigai</p>
+              <p class="main__content-blog-covers-box-tag-com">,</p>
+              <p class="main__content-blog-covers-box-tag">przedsiębiorczość</p>
+              <p class="main__content-blog-covers-box-tag-com">,</p>
+              <p class="main__content-blog-covers-box-tag">strategia</p>
+            </div>
+          </div>
+          <div class="main__content-blog-covers-box4">
+            <img
+              class="main__content-blog-covers-box-img"
+              src="./images/covers/cover4.png"
+              alt="cover1"
+            />
+            <div class="main__content-blog-covers-box-text">
+              O czarnych łabędziach...
+            </div>
+            <div class="main__content-blog-covers-box-tags">
+              <p class="main__content-blog-covers-box-tag">agile</p>
+              <p class="main__content-blog-covers-box-tag-com">,</p>
+              <p class="main__content-blog-covers-box-tag">evidence</p>
+              <p class="main__content-blog-covers-box-tag-com">,</p>
+              <p class="main__content-blog-covers-box-tag">lean</p>
+            </div>
+          </div>
+          <div class="main__content-blog-covers-box5">
+            <img
+              class="main__content-blog-covers-box-img"
+              src="./images/covers/cover5.png"
+              alt="cover1"
+            />
+            <div class="main__content-blog-covers-box-text">
+              Pułapki postępu ...
+            </div>
+            <div class="main__content-blog-covers-box-tags">
+              <p class="main__content-blog-covers-box-tag">innowacyjność</p>
+              <p class="main__content-blog-covers-box-tag-com">,</p>
+              <p class="main__content-blog-covers-box-tag">progresywność</p>
+              <p class="main__content-blog-covers-box-tag-com">,</p>
+              <p class="main__content-blog-covers-box-tag">zmiana</p>
+            </div>
+          </div>
+          <div class="main__content-blog-covers-box6">
+            <img
+              class="main__content-blog-covers-box-img"
+              src="./images/covers/cover6.png"
+              alt="cover1"
+            />
+            <div class="main__content-blog-covers-box-text">
+              Mistrzowskie pierścienie ...
+            </div>
+            <div class="main__content-blog-covers-box-tags">
+              <p class="main__content-blog-covers-box-tag">motywacja</p>
+              <p class="main__content-blog-covers-box-tag-com">,</p>
+              <p class="main__content-blog-covers-box-tag">przywództwo</p>
+              <p class="main__content-blog-covers-box-tag-com">,</p>
+              <p class="main__content-blog-covers-box-tag">zespół</p>
+            </div>
+          </div>
+          <div class="main__content-blog-title-box2">
+            <div>
+              „Inspiracja istnieje, ale musi zastać cię przy pracy!” – Pablo
+              Picasso, 1881-1973 n.e.
+            </div>
+          </div>
+          <div class="main__content-blog-covers-box7">
+            <img
+              class="main__content-blog-covers-box-img"
+              src="./images/covers/cover7.png"
+              alt="cover1"
+            />
+            <div class="main__content-blog-covers-box-text">
+              Projekt Feniks ...
+            </div>
+            <div class="main__content-blog-covers-box-tags">
+              <p class="main__content-blog-covers-box-tag">it</p>
+              <p class="main__content-blog-covers-box-tag-com">,</p>
+              <p class="main__content-blog-covers-box-tag">lean</p>
+              <p class="main__content-blog-covers-box-tag-com">,</p>
+              <p class="main__content-blog-covers-box-tag">projekt</p>
+            </div>
+          </div>
+        </div>
+        <div class="main__content-motivate">
+          <div class="main__content-motivate-think-big-box">
+            <div class="main__content-motivate-box">
+              <p>think big.</p>
+            </div>
+            <div class="main__content-motivate-box">
+              <p id="think-big">think big.</p>
+            </div>
+            <div class="main__content-motivate-box">
+              <p>think big.</p>
+            </div>
+            <div class="main__content-motivate-box">
+              <p>think big.</p>
+            </div>
+          </div>
+          <div class="main__content-motivate-start-small-box">
+            <div class="main__content-motivate-box">
+              <p>start small.</p>
+            </div>
+            <div class="main__content-motivate-box">
+              <p>start small.</p>
+            </div>
+            <div class="main__content-motivate-box">
+              <p id="start-small">start small.</p>
+            </div>
+          </div>
+          <div class="main__content-motivate-move-smart-box">
+            <div class="main__content-motivate-box">
+              <p>move smart.</p>
+            </div>
+            <div class="main__content-motivate-box">
+              <p>move smart.</p>
+            </div>
+            <div class="main__content-motivate-box">
+              <p id="move-start">move smart.</p>
+            </div>
+          </div>
+        </div>
+        <div class="main__content-face">
+          <div class="main__content-face-box1">
+            <p class="main__content-face-box1-text">
+              Pomagamy rozwijać biznesy gotowe na nowe czasy
+            </p>
+            <img
+              class="main__content-face-box1-img"
+              src="./images/photos/photo9.png"
+              alt="photo9"
+            />
+          </div>
+          <div class="main__content-face-box2">
+            <p class="main__content-face-box2-text">
+              Wierzymy, że organizacje mogą być bardziej skuteczne, a pracujący
+              w nich ludzie żyć szczęśliwie, budować wartość i zmieniać świat na
+              lepsze.
+            </p>
+            <img
+              class="main__content-face-box2-img"
+              src="./images/photos/photo10.png"
+              alt="photo10"
+            />
+            <div class="main__content-face-box3">
+              <div class="main__content-face-box3-sign1">
+                <img
+                  class="main__content-face-box3-sign1-img"
+                  src="./images/svg/sign2.svg"
+                  alt="sign1"
+                />
+                <p class="main__content-face-box3-sign1-text">
+                  Przemysław Skrzek
+                </p>
+              </div>
+              <div class="main__content-face-box3-sign2">
+                <img
+                  class="main__content-face-box3-sign2-img"
+                  src="./images/svg/sign1.svg"
+                  alt="sign2"
+                />
+                <p class="main__content-face-box3-sign2-text">Maciej Gawlik</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main__footer">
+        <div class="main__footer-content">
+          <div class="main__footer-content-consultation">
+            <p>umów się na bezpłatną konsultację</p>
+          </div>
+          <div class="main__footer-content-contacts">
+            <p id="email">hello@leanspin.pl</p>
+            <p id="phone">+48 534 999 080</p>
+          </div>
+          <div class="main__footer-content-address-box">
+            <div class="main__footer-content-address">
+              <div class="main__footer-content-address-studio">
+                <p>Studio LEANSPIN, Gałczyńskiego 33</p>
+              </div>
+              <div class="main__footer-content-address-polska">
+                <p>52-214 Wrocław, Polska</p>
+              </div>
+            </div>
+            <div class="main__footer-content-address-social">
+              <div
+                class="main__footer-content-address-social-logo1"
+                onclick="document.location.href = 'https://www.facebook.com/';"
+              >
+                <svg
+                  width="60"
+                  height="60"
+                  viewBox="0 0 60 60"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M60 29.901C60 13.387 46.569 0 30 0C13.431 0 0 13.387 0 29.901C0 44.826 10.97 57.196 25.313 59.44V38.545H17.695V29.9H25.312V23.313C25.312 15.819 29.792 11.679 36.644 11.679C39.926 11.679 43.359 12.263 43.359 12.263V19.622H39.576C35.85 19.622 34.687 21.927 34.687 24.292V29.9H43.007L41.677 38.544H34.687V59.438C49.03 57.196 60 44.826 60 29.901Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div
+                class="main__footer-content-address-social-logo2"
+                onclick="document.location.href = 'https://www.instagram.com/';"
+              >
+                <svg
+                  width="60"
+                  height="60"
+                  viewBox="0 0 60 60"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_1733)">
+                    <path
+                      d="M30 0C13.434 0 0 13.434 0 30C0 46.566 13.434 60 30 60C46.566 60 60 46.566 60 30C60 13.434 46.566 0 30 0ZM21.282 45.352H13.976V23.37H21.282V45.352ZM17.63 20.369H17.583C15.131 20.369 13.545 18.681 13.545 16.572C13.545 14.415 15.18 12.773 17.679 12.773C20.179 12.773 21.716 14.415 21.764 16.572C21.764 18.681 20.178 20.369 17.63 20.369ZM47.629 45.352H40.323V33.592C40.323 30.637 39.265 28.622 36.622 28.622C34.603 28.622 33.402 29.981 32.873 31.293C32.68 31.763 32.633 32.419 32.633 33.076V45.352H25.327C25.327 45.352 25.422 25.432 25.327 23.37H32.633V26.483C33.603 24.985 35.341 22.854 39.217 22.854C44.024 22.854 47.629 25.996 47.629 32.747V45.352Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_1733">
+                      <rect width="60" height="60" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main__footer-rights">
+          <p id="copyright">© 2021 Copyright LEANSPIN</p>
+          <p id="private">Polityka prywatności</p>
+          <p id="design">Design:</p>
+          <p id="designer">Ficturo</p>
+        </div>
+      </div>
+    </div>
+    <script src="./JS/main.js"></script>
+  </body>
+</html>
